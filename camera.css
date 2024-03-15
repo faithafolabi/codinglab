@@ -90,3 +90,40 @@ nav {
   display: flex;
   justify-content: center;
 }
+
+img {
+  max-width: 100%;
+}
+
+@media all and (max-width: 1000px){
+  body{
+    size: 300px;
+  }
+  img{
+    size: 100%;
+
+  header {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 700px) {
+  body{
+    size: 100%;
+  }
+
+  header {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 400px) {
+  body{
+    size: 100%;
+  }
+
+  header {
+    flex-direction: column;
+    size: 20px;
+  }
+}
