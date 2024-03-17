@@ -1,19 +1,15 @@
 body {
   margin: 0;
   background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
   color: white;
-  flex-direction: column;
 }
 
 section {
   height: 90vh;
   background-image: url("./tinywow_change_bg_photo_50112647.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
   margin: 0;
 }
 
@@ -57,14 +53,15 @@ header {
 
 .amaze {
   color: white;
-  font-size: 40px;
+  font-size: 60px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .css {
   color: white;
-  font-size: 30px;
+  font-size: 45px;
   padding-left: 50px;
+  text-align: center;
 }
 
 .more {
@@ -75,6 +72,7 @@ header {
   border-radius: 3px;
   margin-right: 5px;
   font-family: sans-serif;
+  font-size: 20px;
 }
 
 .more2 {
@@ -84,6 +82,7 @@ header {
   border: 1px double white;
   margin-left: 5px;
   font-family: sans-serif;
+  font-size: 20px;
 }
 
 nav {
@@ -95,35 +94,120 @@ img {
   max-width: 100%;
 }
 
-@media all and (max-width: 1000px){
-  body{
-    size: 300px;
-  }
-  img{
-    size: 100%;
+.menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  display: none;
+}
 
-  header {
-    flex-direction: column;
+.mobile-nav {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 1%;
+  left: 75%;
+  margin-top: 3px;
+  border-radius: 10px;
+  display: none;
+}
+
+.mobile-nav li a {
+  background-color: whitesmoke;
+  margin-top: 15px;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 15px;
+}
+
+@media all and (max-width: 768px) {
+  .lab {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .menu {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    margin-right: 60px;
+    list-style: none;
+  }
+
+  .menu :hover {
+    background-color: black;
+    transition: 0.5s ease-in-out;
+  }
+
+  .menu :hover .mobile-nav {
+    display: flex;
+    position: absolute;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .mobile-nav {
+    display: none;
+    width: 15vw;
+  }
+
+  .coding1 {
+    flex: 1;
+    text-align: right;
+    margin-right: 40px;
+    display: none;
   }
 }
 
-@media all and (max-width: 700px) {
-  body{
-    size: 100%;
+@media all and (max-width: 430px) {
+  .lab {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .menu {
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    margin-right: 80px;
   }
 
-  header {
+  .menu-ul-li-a {
+    color: black;
+  }
+
+  .coding1 {
+    flex: 1;
+    text-align: right;
+    margin-right: 40px;
+    display: none;
+  }
+
+  .amaze {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .css {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
     flex-direction: column;
-  }
-}
-
-@media all and (max-width: 400px) {
-  body{
-    size: 100%;
+    justify-content: center;
+    margin-left: 75px;
   }
 
-  header {
-    flex-direction: column;
-    size: 20px;
+  button {
+    width: 50vw;
+    text-align: center;
+    margin-bottom: 10px;
   }
 }
